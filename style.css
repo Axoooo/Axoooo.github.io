@@ -1,0 +1,26 @@
+img {
+    width: 20%;
+    margin: calc(10%/6);
+    border-radius: 360%;
+    border-color: black;
+    border: dashed;
+    
+}
+body
+{
+background-image:url(https://www.lawnstarter.com/blog/wp-content/uploads/2017/08/zoysia-grass.jpg);
+
+}
+nav
+{
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f1f1f1;
+    width: 20%;
+    margin-left: calc(10%/6);
+    padding: 1.2em 0;
+    background-color: rgba(255, 255, 255, 0.217);
+    border-radius: 25% 10%;
+}
