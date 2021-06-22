@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="ttt_Style.css">
+
+    <link rel="icon" type="image/png" href="imgs/Nelly funny lol.jpg">
+
+    <title>Nelly`s Home</title>
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+        <a href="#" class="navbar-brand">Nelly`s Home</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Tic-tac-toe.html" class="nav-linkk">TIC-TAC-TOE</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class=container>
+        <table>
+            <tr>
+                <td class="cell" id="0"></td>
+                <td class="cell" id="1"></td>
+                <td class="cell" id="2"></td>
+            </tr>
+            <tr>
+                <td class="cell" id="3"></td>
+                <td class="cell" id="4"></td>
+                <td class="cell" id="5"></td>
+            </tr>
+            <tr>
+                <td class="cell" id="6"></td>
+                <td class="cell" id="7"></td>
+                <td class="cell" id="8"></td>
+            </tr>
+        </table>
+        <div class="endgame">
+            <div class="text"></div>
+        </div>
+        <div>
+            <img src="imgs/lo.jpg" alt="">
+        </div>
+    </section>
+
+    <div class="container">
+        <div>
+            <h2 class="lol"> man</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h2 class="lol"> man</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h2 class="lol"> man</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h2 class="lol"> man</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h2 class="lol"> man</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h2 class="lol"> man</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h2 class="lol"> man</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col">
+                <h2 class="lol"> man</h2>
+            </div>
+            <div class="col-1">
+                <button onClick="startGame()">Replay</button>
+            </div>
+            <div class="col">
+                <h2 class="lol"> man</h2>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="./ttt_script.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+            $(document).scroll(function() {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+</body>
+
+</html>
