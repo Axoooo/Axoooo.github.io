@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="stylej.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="imgs/indexP.jpg">
+
+    <title> Papi`s Jol</title>
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+        <a href="index.html" class="navbar-brand">Papi`s Jol</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">VARFÖR JAG ÄLSKAR PAPPA</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <section>
+
+        <div class="container">
+            <h2 class="main-title">Papi`s Jol</h2>
+            <img src="imgs/indexPP.jpg" class="movingNelly" alt="" />
+        </div>
+        <div class="content">
+            <div class="content-images">
+                <div class="slider">
+                    <div class="slide active">
+                        <img src="https://via.placeholder.com/800x500?text=placeholder our Photo here" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://via.placeholder.com/800x500?text=placeholder our Photo here 2" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://via.placeholder.com/800x500?text=placeholder our Photo here 3" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://via.placeholder.com/800x500?text=placeholder our Photo here 4" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="https://via.placeholder.com/800x500?text=placeholder our Photo here 5" alt="">
+                    </div>
+                    <div class="navigation">
+                        <i class="fas fa-chevron-left prev-btn"></i>
+                        <i class="fas fa-chevron-right next-btn"></i>
+                    </div>
+                    <div class="navigation-visibility">
+                        <div class="slide-icon active"></div>
+                        <div class="slide-icon"></div>
+                        <div class="slide-icon"></div>
+                        <div class="slide-icon"></div>
+                        <div class="slide-icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        $(function() {
+            $(document).scroll(function() {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        const slider = document.querySelector(".slider");
+        const nextBtn = document.querySelector(".next-btn");
+        const prevBtn = document.querySelector(".prev-btn");
+        const slides = document.querySelectorAll(".slide");
+        const slideIcons = document.querySelectorAll(".slide-icon");
+        const numberOfSlides = slides.length;
+        var slideNumber = 0;
+
+        //image slider next button
+        nextBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+            });
+
+            slideNumber++;
+
+            if (slideNumber > (numberOfSlides - 1)) {
+                slideNumber = 0;
+            }
+
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+        });
+
+        //image slider previous button
+        prevBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+            });
+
+            slideNumber--;
+
+            if (slideNumber < 0) {
+                slideNumber = numberOfSlides - 1;
+            }
+
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+        });
+
+        //image slider autoplay
+        var playSlider;
+
+        var repeater = () => {
+            playSlider = setInterval(function() {
+                slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                });
+                slideIcons.forEach((slideIcon) => {
+                    slideIcon.classList.remove("active");
+                });
+
+                slideNumber++;
+
+                if (slideNumber > (numberOfSlides - 1)) {
+                    slideNumber = 0;
+                }
+
+                slides[slideNumber].classList.add("active");
+                slideIcons[slideNumber].classList.add("active");
+            }, 4000);
+        }
+        repeater();
+
+        //stop the image slider autoplay on mouseover
+        slider.addEventListener("mouseover", () => {
+            clearInterval(playSlider);
+        });
+
+        //start the image slider autoplay again on mouseout
+        slider.addEventListener("mouseout", () => {
+            repeater();
+        });
+    </script>
+</body>
+
+</html>
